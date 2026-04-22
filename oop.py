@@ -1,20 +1,25 @@
 import math
 from abc import ABC, abstractmethod
+
+
 class Person:
-    def init(self):
+    def __init__(self):
         self._age = 0
+
     def set_age(self, age):
         if age < 0:
             print("ошибка: возраст не может быть отрицательным")
         else:
             self._age = age
+
     def get_age(self):
         return self._age
 
 
 class Animal:
-    def init(self, name):
+    def __init__(self, name):
         self.name = name
+
     def speak(self):
         return "I am an animal"
 
@@ -53,7 +58,7 @@ class Shape(ABC):
 
 
 class Rectangle(Shape):
-    def init(self, width, height):
+    def __init__(self, width, height):
         self.width = width
         self.height = height
     def area(self):
@@ -61,8 +66,9 @@ class Rectangle(Shape):
 
 
 class Circle(Shape):
-    def init(self, radius):
+    def __init__(self, radius):
         self.radius = radius
+
     def area(self):
         return math.pi * (self.radius ** 2)
 p = Person()
