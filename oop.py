@@ -47,6 +47,7 @@ class Car(Vehicle):
 class Bicycle(Vehicle):
     def move(self):
         return "Bicycle is pedaling"
+        
 def move(vehicle):
     return vehicle.move()
 
